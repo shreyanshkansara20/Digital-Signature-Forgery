@@ -141,7 +141,7 @@ key=rsa.newkeys(2048)[0]
 
 
 # Changing public key component to 3
-print(key.e=3)
+key.e=3
 
 
 # In[109]:
