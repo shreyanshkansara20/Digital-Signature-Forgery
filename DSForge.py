@@ -36,7 +36,7 @@ def cube_root(n):
 # In[3]:
 
 
-cube_root(8)
+print(cube_root(8))
 
 
 # In[4]:
@@ -61,7 +61,7 @@ print(suffix.hex())
 
 
 #This has to be 1 because if the last bit is zero, then it becomes impossible to forge a suffix using this method.
-get_bit(from_bytes(suffix),0)
+print(get_bit(from_bytes(suffix),0))
 
 
 # In[10]:
@@ -78,19 +78,19 @@ for i in range(len(suffix)*8):
 # In[11]:
 
 
-len(to_bytes((new_sig_suffix)))
+print(len(to_bytes((new_sig_suffix))))
 
 
 # In[121]:
 
 
-to_bytes(new_sig_suffix**3).hex()
+print(to_bytes(new_sig_suffix**3).hex())
 
 
 # In[12]:
 
 
-to_bytes((new_sig_suffix)**3).endswith(suffix)
+print(to_bytes((new_sig_suffix)**3).endswith(suffix))
 
 
 # In[115]:
@@ -127,7 +127,7 @@ while True:
 
 
 #Hex value of the signature seen on the victim side after decryption i.e. sig**3
-to_bytes(from_bytes(new_sig)**3).hex()
+print(to_bytes(from_bytes(new_sig)**3).hex())
 
 
 # In[77]:
@@ -141,17 +141,17 @@ key=rsa.newkeys(2048)[0]
 
 
 # Changing public key component to 3
-key.e=3
+print(key.e=3)
 
 
 # In[109]:
 
 
-key
+print(key)
 
 
 # In[80]:
 
 
-rsa.verify(message,new_sig,key)
+print(rsa.verify(message,new_sig,key))
 
